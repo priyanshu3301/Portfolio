@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanshu - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8ddab812db.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="image"></div>
+        <div class="container">
+            <nav>
+                <h2>Priyanshu</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <div class="pro">
+                    <img src="images/Picsart.png" alt="Overlay Image" class="overlay-image">
+                </div>
+                <h1 class="h1">Hi, My name is <span class="ncolor">Priyanshu</span><br> and I am a passionate</h1>
+                <h1><span id="element"></span></h1>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/image.jpg" alt="About Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        I am a second-year B.Tech student specializing in Data Science at Moradabad Institute of Technology. My passion for interacting with technology and playing with data drives me to continuously enhance my skills. I aspire to solve significant real-world problems through the power of Data Science. With a strong foundation in Python and a practical approach to learning, I am committed to making a meaningful impact in the field.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span></span>Pythin</li>
+                            <li><span></span>Java</li>
+                            <li><span></span>Web Development</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>10+2</span><br>S.V.M Inter College Rampur</li>
+                            <li><span>Under graduation</span><br>M.I.T Moradabad</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="experience">
+                        <ul>
+                            <li><span></span><br>Intern</li>
+                            <li><span></span><br></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio">
+        <div class="container">
+            <h1 class="subtitle">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/dic.png">
+                    <div class="layer">
+                        <h3>Dice Simulator</h3>
+                        <p>Simple yet effective program that mimics the action of rolling a die, or multiple dice, virtually.</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/tg.png">
+                    <div class="layer">
+                        <h3>Telegrame BOT</h3>
+                        <p>A Telegram bot scrapes Coursera for free courses and sends them directly to you.</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work a">
+                    <img src="images/linked.png">
+                    <div class="layer">
+                        <h3>LinkedIn Scraper</h3>
+                        <p>It is a Python program that finds a person based on your input and extracts all their details.</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contect Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>priyansgu88011@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/priyanshu-singh-b936502a6p"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/priyanshu3301"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/priyanshu_3301/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+                    </div>
+                    <a href="images/cv.pdf" class="btn btn2">Download cv</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p class="copy">copyright Priyanshu. Made with <i class="fa-solid fa-heart"></i> by Priyanshy</p>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontent = document.getElementsByClassName("tab-content");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tablink of tabcontent){
+                tablink.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['web Developer.', 'Python Programer.','Data Analyst.'],
+          typeSpeed: 60,
+        });
+      </script>
+    
+</body>
+</html>
